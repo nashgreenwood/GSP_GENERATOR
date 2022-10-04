@@ -1,3 +1,14 @@
+'''
+Author: Nash Greenwood
+Date: 10/4/2022
+
+This script generates test records for the LPA_GSP table in the
+lpa-manpower-db-dev server. Random values and inputs are used to
+simulate an authentic record to allow testing for the frontend of
+the LPA Manpower Application.
+
+'''
+
 import random
 import string
 import datetime
@@ -34,13 +45,16 @@ def writeFile(msg):
 
 
 def generateInsertValues():
+    # random base product list
     randomBaseProduct = ['32', '10', '47', '29', '40', '63', '8', '21']
+    # generate random SOP date
     start_dt = datetime.date(2023, 2, 1)
     end_dt = datetime.date(2025, 3, 1)
     time_between_dates = end_dt - start_dt
     days_between_dates = time_between_dates.days
     random_number_of_days = random.randrange(days_between_dates)
     random_date = start_dt + datetime.timedelta(days=random_number_of_days)
+    # generate award confidence float
     confidence = random.random()
     # generate record Values Variables
     Status = 'New'
@@ -143,7 +157,9 @@ def generateInsertQuery(recordAmount):
         recordValues += sqlInserValues
         i += 1
 
+    # trim comma from end of insert command
     recordValues = recordValues[:-1]
+    # add ; to end of insert command
     recordValues += ';'
     return sqlInsert + recordValues
 
