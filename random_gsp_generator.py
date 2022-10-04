@@ -27,7 +27,7 @@ def prompt(message):
 
 def writeFile(msg):
     try:
-        with open('./readme.txt', 'w') as f:
+        with open('./sqlInsert.txt', 'w') as f:
             f.write(msg)
     except FileNotFoundError:
         print("File Error - Unable to write")
