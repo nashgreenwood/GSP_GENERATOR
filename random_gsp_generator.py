@@ -27,7 +27,7 @@ def main():
 def prompt(message):
     try:
         recordAmount = int(message)
-        if not 0 < recordAmount < 50:
+        if not 0 < recordAmount <= 50:
             print("Invalid range! Please enter amount (1-50)")
             return None
         return recordAmount
