@@ -58,7 +58,7 @@ def generateInsertValues():
     confidence = round(random.random(), 2)
     # generate record Values Variables
     Status = 'New'
-    NBO_Number = 'NBO-'+''.join(random.choices(string.digits, k=5))
+    NBO_Number = 'NBO-'+''.join(random.choices(string.digits, k=9))
     LPA_Base_Product_ID = random.choice(randomBaseProduct)
     Project_Owner = 'NULL'
     Project_Created = 'No'
@@ -75,7 +75,7 @@ def generateInsertValues():
     Base_Product = 'Test Record'
     OEM_Engineering_Region = 'Test Record'
     Support_Needed = 'No support required'
-    EOPvalue = '0.50'
+    EOPvalue = random_date
     Award_Confidence = confidence
     Product_Line_Group = 'Test Record'
     EngBaseWorkEffort = confidence
@@ -149,7 +149,7 @@ def generateInsertQuery(recordAmount):
 
         Status, NBO_Number, LPA_Base_Product_ID, Project_Owner, Project_Created, EESupportNeeded, EEBaseProductID, DurationSupport, Program, Production_Brand, Product_Line, Customer_Name, Start_Date, SOPvalue, COPvalue, Base_Product, OEM_Engineering_Region, Support_Needed, EOPvalue, Award_Confidence, Product_Line_Group, EngBaseWorkEffort, ProjectAdjFactor, MechPhase0Day, MechPhase1Day, MechPhase2Day, MechPhase3Day, MechPhase4Day, MechPhase5Day, HrsMechPhase0, HrsMechPhase1, HrsMechPhase2, HrsMechPhase3, HrsMechPhase4, HrsMechPhase5, HrsCadPhase0, HrsCadPhase1, HrsCadPhase2, HrsCadPhase3, HrsCadPhase4, HrsCadPhase5, HrsValidationPhase0, HrsValidationPhase1, HrsValidationPhase2, HrsValidationPhase3, HrsValidationPhase4, HrsValidationPhase5, HrsPrototypePhase0, HrsPrototypePhase1, HrsPrototypePhase2, HrsPrototypePhase3, HrsPrototypePhase4, HrsPrototypePhase5, AdjMechPhase0, AdjMechPhase1, AdjMechPhase2, AdjMechPhase3, AdjMechPhase4, AdjMechPhase5, AdjCadPhase0, AdjCadPhase1, AdjCadPhase2, AdjCadPhase3, AdjCadPhase4, AdjCadPhase5, AdjProtoPhase0, AdjProtoPhase1, AdjProtoPhase2, AdjProtoPhase3, AdjProtoPhase4, AdjProtoPhase5, AdjValPhase0, AdjValPhase1, AdjValPhase2, AdjValPhase3, AdjValPhase4, AdjValPhase5 = values
 
-        sqlInserValues = f"('{Status}','{NBO_Number}',{LPA_Base_Product_ID},{Project_Owner},'{Project_Created}','{EESupportNeeded}',{EEBaseProductID},'{DurationSupport}','{Program}','{Production_Brand}','{Product_Line}','{Customer_Name}',{Start_Date},'{SOPvalue}','{COPvalue}','{Base_Product}','{OEM_Engineering_Region}','{Support_Needed}',{EOPvalue},{Award_Confidence},'{Product_Line_Group}',{EngBaseWorkEffort},{ProjectAdjFactor},{MechPhase0Day},{MechPhase1Day},{MechPhase2Day},{MechPhase3Day},{MechPhase4Day},{MechPhase5Day},{HrsMechPhase0},{HrsMechPhase1},{HrsMechPhase2},{HrsMechPhase3},{HrsMechPhase4},{HrsMechPhase5},{HrsCadPhase0},{HrsCadPhase1},{HrsCadPhase2},{HrsCadPhase3},{HrsCadPhase4},{HrsCadPhase5},{HrsValidationPhase0},{HrsValidationPhase1},{HrsValidationPhase2},{HrsValidationPhase3},{HrsValidationPhase4},{HrsValidationPhase5},{HrsPrototypePhase0},{HrsPrototypePhase1},{HrsPrototypePhase2},{HrsPrototypePhase3},{HrsPrototypePhase4},{HrsPrototypePhase5},{AdjMechPhase0},{AdjMechPhase1},{AdjMechPhase2},{AdjMechPhase3},{AdjMechPhase4},{AdjMechPhase5},{AdjCadPhase0},{AdjCadPhase1},{AdjCadPhase2},{AdjCadPhase3},{AdjCadPhase4},{AdjCadPhase5},{AdjProtoPhase0},{AdjProtoPhase1},{AdjProtoPhase2},{AdjProtoPhase3},{AdjProtoPhase4},{AdjProtoPhase5},{AdjValPhase0},{AdjValPhase1},{AdjValPhase2},{AdjValPhase3},{AdjValPhase4},{AdjValPhase5}),"
+        sqlInserValues = f"('{Status}','{NBO_Number}',{LPA_Base_Product_ID},{Project_Owner},'{Project_Created}','{EESupportNeeded}',{EEBaseProductID},'{DurationSupport}','{Program}','{Production_Brand}','{Product_Line}','{Customer_Name}',{Start_Date},'{SOPvalue}','{COPvalue}','{Base_Product}','{OEM_Engineering_Region}','{Support_Needed}','{EOPvalue}',{Award_Confidence},'{Product_Line_Group}',{EngBaseWorkEffort},{ProjectAdjFactor},{MechPhase0Day},{MechPhase1Day},{MechPhase2Day},{MechPhase3Day},{MechPhase4Day},{MechPhase5Day},{HrsMechPhase0},{HrsMechPhase1},{HrsMechPhase2},{HrsMechPhase3},{HrsMechPhase4},{HrsMechPhase5},{HrsCadPhase0},{HrsCadPhase1},{HrsCadPhase2},{HrsCadPhase3},{HrsCadPhase4},{HrsCadPhase5},{HrsValidationPhase0},{HrsValidationPhase1},{HrsValidationPhase2},{HrsValidationPhase3},{HrsValidationPhase4},{HrsValidationPhase5},{HrsPrototypePhase0},{HrsPrototypePhase1},{HrsPrototypePhase2},{HrsPrototypePhase3},{HrsPrototypePhase4},{HrsPrototypePhase5},{AdjMechPhase0},{AdjMechPhase1},{AdjMechPhase2},{AdjMechPhase3},{AdjMechPhase4},{AdjMechPhase5},{AdjCadPhase0},{AdjCadPhase1},{AdjCadPhase2},{AdjCadPhase3},{AdjCadPhase4},{AdjCadPhase5},{AdjProtoPhase0},{AdjProtoPhase1},{AdjProtoPhase2},{AdjProtoPhase3},{AdjProtoPhase4},{AdjProtoPhase5},{AdjValPhase0},{AdjValPhase1},{AdjValPhase2},{AdjValPhase3},{AdjValPhase4},{AdjValPhase5}),"
 
         # generate number of records
         recordValues += sqlInserValues
