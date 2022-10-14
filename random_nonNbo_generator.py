@@ -177,4 +177,5 @@ def generateInsertQuery(recordAmount):
     return sqlInsert + recordValues
 
 
-main()
+if __name__ == "__main__":
+    main()
