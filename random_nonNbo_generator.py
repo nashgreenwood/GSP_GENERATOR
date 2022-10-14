@@ -1,11 +1,11 @@
 '''
 Author: Nash Greenwood
-Date: 10/4/2022
+Date: 10/14/2022
 
-This script generates test records for the LPA_GSP table in the
+This script generates test records for the LPA_GSP_NONNBO table in the
 lpa-manpower-db-dev server. Random values and inputs are used to
 simulate an authentic record to allow testing for the frontend of
-the LPA Manpower Application.
+the LPA Manpower Application for the migration portion of the project.
 
 '''
 
