@@ -63,8 +63,10 @@ def generateInsertValues():
     random_date = start_dt + datetime.timedelta(days=random_number_of_days)
     randmom_start_date = start_dt + \
         datetime.timedelta(days=random_number_of_days)
+
     # generate award confidence float
     confidence = round(random.random(), 2)
+
     # generate record Values Variables
     Status = 'Migrate'
     Project_Name = ''.join(random.choices(

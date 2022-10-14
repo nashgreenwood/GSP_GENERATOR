@@ -54,8 +54,10 @@ def generateInsertValues():
     days_between_dates = time_between_dates.days
     random_number_of_days = random.randrange(days_between_dates)
     random_date = start_dt + datetime.timedelta(days=random_number_of_days)
+
     # generate award confidence float
     confidence = round(random.random(), 2)
+
     # generate record Values Variables
     Status = 'New'
     NBO_Number = 'NBO-'+''.join(random.choices(string.digits, k=9))
