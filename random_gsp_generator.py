@@ -38,7 +38,7 @@ def prompt(message):
 
 def writeFile(msg):
     try:
-        with open('./sqlInsert.txt', 'w') as f:
+        with open('./nboInsert.txt', 'w') as f:
             f.write(msg)
     except FileNotFoundError:
         print("File Error - Unable to write")
