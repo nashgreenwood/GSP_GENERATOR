@@ -73,11 +73,11 @@ def generateInsertValues():
         string.digits, k=9)) + '- Test-Record'
     LPA_Base_Product_ID = random.choice(randomBaseProductId)
     MigratedZOHOID = ''.join(random.choices(string.digits, k=20))
-    Project_Owner = 'sir.testington@leggett.com'
+    Project_Owner = 'drew.detherage@leggett.com'
     Project_Created = 'No'
     EESupportNeeded = 'No'
     EEBaseProductID = 'NULL'
-    DurationSupport = 'NULL'
+    DurationSupport = 'No'
     Start_Date = randmom_start_date
     SOPvalue = random_date
     Base_Product = random.choice(randomBaseProduct)
